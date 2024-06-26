@@ -1,0 +1,20 @@
+{
+  "name": "phico/app",
+  "description": "An example app layout for Phico",
+  "type": "project",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "phico/phico": "dev-main",
+    "phico/blade": "dev-main",
+    "phico/database": "dev-main",
+    "phico/mailer": "dev-main",
+    "phico/queue": "dev-main",
+    "phico/session": "dev-main"
+  }
+}
