@@ -38,7 +38,21 @@ $app->on(['500', '501'], function ($request, $e) {
     if ($request->isXhr()) {
         return response($e->getCode())->json([
             'status' => 'server error',
-            'message' => 'Sorry, something screwed up'
+            'message' => 'Sorry, something screwed up it was us and not you'
+        ]);
+    }
+
+    // return html
+    return response($e->getCode())->html('<h1>Server Error</h1>');
+
+});
+// handle all other errors
+$app->on('error', function ($request, $e) {
+
+    if ($request->isXhr()) {
+        return response($e->getCode())->json([
+            'status' => 'server error',
+            'message' => 'Sorry, something screwed up and we have no idea why'
         ]);
     }
 
