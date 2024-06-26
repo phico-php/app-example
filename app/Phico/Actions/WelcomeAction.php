@@ -2,22 +2,17 @@
 
 declare(strict_types=1);
 
-namespace App\Welcome\Actions;
+namespace App\Phico\Actions;
 
 use Phico\Action\Action;
 use Phico\Http\{Request, Response};
 
 
-class IndexAction extends Action
+class WelcomeAction extends Action
 {
-    public function use(): array
-    {
-        return [];
-    }
-
     public function handle(Request $request): Response
     {
         return response()
-            ->html(view()->render('welcome::index'));
+            ->html(view()->render('phico::welcome'));
     }
 }
