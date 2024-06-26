@@ -7,3 +7,12 @@
  */
 
 require path('app/Phico/routes.php');
+
+$app->get('/api', function ($request) {
+
+    return response()->json([
+        'status' => 'ok',
+        'message' => 'This is an API route'
+    ]);
+
+});
