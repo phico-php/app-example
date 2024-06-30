@@ -16,5 +16,8 @@
     "phico/mailer": "dev-main",
     "phico/queue": "dev-main",
     "phico/session": "dev-main"
+  },
+  "scripts": {
+    "post-create-project-cmd": "./phico init"
   }
 }
