@@ -1,6 +1,6 @@
 {
-  "name": "phico/app",
-  "description": "An example app layout for Phico",
+  "name": "phico/app-example",
+  "description": "An app layout for Phico with optional packages and code examples",
   "type": "project",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -9,6 +9,28 @@
       "App\\": "app/"
     }
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/phico"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/blade"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/database"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/queue"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/mailer"
+    }
+  ],
   "require": {
     "phico/phico": "dev-main",
     "phico/blade": "dev-main",
