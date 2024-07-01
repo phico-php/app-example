@@ -49,7 +49,7 @@ $app->on(['500', '501'], function ($request, $e) {
 // handle all other errors
 $app->on('error', function ($request, $e) {
 
-    if ($request->isXhr()) {
+    if ($request->isXhr() or $request->accepts('media', 'json')) {
         return response($e->getCode())->json([
             'status' => 'server error',
             'message' => 'Sorry, something screwed up and we have no idea why'
