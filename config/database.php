@@ -8,7 +8,7 @@ return [
 
         'default' => [
             'driver' => env('DATABASE_DEFAULT_DRIVER', 'sqlite'),
-            'database' => env('DATABASE_DEFAULT_DATABASE', 'storage/database.sqlite'),
+            'database' => env('DATABASE_DEFAULT_DATABASE', 'storage/database/default.sqlite'),
             'host' => env('DATABASE_DEFAULT_HOST', ''),
             'port' => env('DATABASE_DEFAULT_PORT', ''),
             'username' => env('DATABASE_DEFAULT_USERNAME', ''),
